@@ -3,12 +3,12 @@ logo:
 
 typography:
   fonts:
-    - family: Open Sans
+    - family: Lato
       source: google
-    - family: Roboto Slab
+    - family: Roboto Flex
       source: google
     - family: Fira Code
       source: google
-  base: Open Sans
-  headings: Roboto Slab
+  base: Lato
+  headings: Roboto Flex
   monospace: Fira Code
