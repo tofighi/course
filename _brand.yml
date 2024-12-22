@@ -9,6 +9,6 @@ typography:
       source: google
     - family: Fira Code
       source: google
-  base: Lato
+  base: Roboto
   headings: Roboto
   monospace: Fira Code
