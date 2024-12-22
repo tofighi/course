@@ -3,7 +3,9 @@ logo:
 
 typography:
   fonts:
+    - family: Roboto Flex
+      source: google
     - family: Montserrat
       source: google
-  base: Montserrat
+  base: Roboto Flex
   headings: Montserrat
