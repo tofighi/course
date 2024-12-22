@@ -5,10 +5,10 @@ typography:
   fonts:
     - family: Lato
       source: google
-    - family: Roboto Flex
+    - family: Roboto
       source: google
     - family: Fira Code
       source: google
   base: Lato
-  headings: Roboto Flex
+  headings: Roboto
   monospace: Fira Code
