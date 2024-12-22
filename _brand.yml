@@ -3,9 +3,12 @@ logo:
 
 typography:
   fonts:
-    - family: Roboto Flex
+    - family: Open Sans
       source: google
-    - family: Montserrat
+    - family: Roboto Slab
       source: google
-  base: Roboto Flex
-  headings: Montserrat
+    - family: Fira Code
+      source: google
+  base: Open Sans
+  headings: Roboto Slab
+  monospace: Fira Code
