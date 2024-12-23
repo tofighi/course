@@ -1,12 +1,12 @@
 ---
 title: "Machine Learning"
-image: true
 description: A Machine Learning course for students
 format:
   html: 
     other-links:
-      - href: dashboard.html
+      - href: https://ghassem.com
         icon: speedometer
+        text: Dashboard
   typst: default
   revealjs:
     output-file: index-reveal.html
