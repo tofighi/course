@@ -7,7 +7,7 @@ format:
     other-links:
       - href: https://ghassem.com
         icon: speedometer
-        text: Ghassem Tofighiwpe
+        text: Ghassem Tofighi
   typst: default
   revealjs:
     output-file: index-reveal.html
