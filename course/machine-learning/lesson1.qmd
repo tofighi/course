@@ -13,6 +13,7 @@ format:
     center-title-slide: false
     smaller: true
     scrollable: true
+    footer: [Lesson 1](lesson1.qmd)
 creator: "@tofighi"
 comments:
   hypothesis: true
