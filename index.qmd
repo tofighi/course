@@ -19,34 +19,34 @@ creator: "@tofighi"
 
 ::: {.content-block}
 
-<!--
+
 ::: {.hero-text}
 # Welcome to Ghassem's Courses
 
 {{< include _course-chooser.qmd >}}
 
-
+<!--
 ::: {.hero-buttons}
 [Get Started](docs/get-started/){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 [Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 ::: 
+-->
 
 :::
--->
+
 
 <!--
 ::: {.hero-animation}
-
 <video autoplay muted playsinline loop>
 <source src="images/hero_animation.mp4" type="video/mp4"/>
 </video>
 :::
 -->
 
-::: <!-- {.content-block} -->
+::: <!-- {/.content-block} -->
 
 
-::: <!-- {.hero-banner} -->
+::: <!-- {/.hero-banner} -->
 
 
 ::: {.hello-quarto .alt-background}
