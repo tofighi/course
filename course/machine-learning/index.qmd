@@ -15,7 +15,7 @@ format:
     center-title-slide: false
     smaller: true
     scrollable: true
-    footer: <a href="ml-index.html">Course Homepage</a>
+    footer: <a href="index.html">Course Homepage</a>
 creator: "@tofighi"
 ---
 
