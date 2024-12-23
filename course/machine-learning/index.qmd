@@ -10,7 +10,7 @@ format:
         text: Ghassem Tofighi
   typst: default
   revealjs:
-    width: 1200
+    width: 1280
     output-file: ml-index.html
     center-title-slide: false
     smaller: true
@@ -19,11 +19,9 @@ creator: "@tofighi"
 ---
 
 :::{.callout-tip}
-## New!
+## Welcome!
 
-We just launched a new > 30 hour video course for more experienced students:
-
-[Practical Deep Learning for Coders part 2: *Deep Learning Foundations to Stable Diffusion*](part2.qmd)
+[Course homepage](courses.ghassem.com/course/machine-learning)
 :::
 
 ::: {layout="[30,70]"}
