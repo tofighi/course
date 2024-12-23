@@ -16,6 +16,7 @@ format:
     smaller: true
     scrollable: true
     appearance:
+      appearparents: true
       autoappear: true
       autoelements: {"ul li": "animate__fadeInLeft"}
     footer: <a href="index.html">Course Homepage</a>
@@ -73,7 +74,10 @@ Our videos have been viewed over 6,000,000 times already! Take a look at the [do
 
 :::
 
-
+## Change when appearance starts {auto-animate=true data-appearevent="autoanimate"}
+* [This is list item 1]{.animate__fadeInLeft}
+* [This is list item 2]{.animate__fadeInLeft}
+* [This is list item 3]{.animate__fadeInLeft}
 
 ## Your instructor
 
