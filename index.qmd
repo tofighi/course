@@ -15,12 +15,12 @@ creator: "@tofighi"
 ---
 
 
-:::::::: {.hero-banner}
+::: {.hero-banner}
 
-:::::: {.content-block}
+::: {.content-block}
 
 <!--
-::::: {.hero-text}
+::: {.hero-text}
 # Welcome to Ghassem's Courses
 
 {{< include _course-chooser.qmd >}}
@@ -31,7 +31,7 @@ creator: "@tofighi"
 [Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 ::: 
 
-:::::
+:::
 -->
 
 <!--
@@ -43,10 +43,10 @@ creator: "@tofighi"
 :::
 -->
 
-:::::: <!-- {.content-block} -->
+::: <!-- {.content-block} -->
 
 
-:::::::: <!-- {.hero-banner} -->
+::: <!-- {.hero-banner} -->
 
 
 ::: {.hello-quarto .alt-background}
