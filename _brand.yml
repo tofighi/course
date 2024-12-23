@@ -1,2 +1,13 @@
 logo: 
   medium: logo.svg
+typography:
+  fonts:
+    - family: Jura
+      source: google
+    - family: Roboto
+      source: google
+    - family: Fira Code
+      source: google
+  base: Roboto
+  headings: Jura
+  monospace: Fira Code
