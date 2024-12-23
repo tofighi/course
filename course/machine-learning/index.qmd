@@ -1,7 +1,15 @@
 ---
 title: "Machine Learning"
-image: false
+image: true
 description: A Machine Learning course for students
+format:
+  html: 
+    other-links:
+      - href: dashboard.html
+        icon: speedometer
+  typst: default
+  revealjs:
+    output-file: index-reveal.html
 creator: "@tofighi"
 ---
 
