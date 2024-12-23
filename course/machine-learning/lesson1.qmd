@@ -1,6 +1,19 @@
 ---
 title: "1: Getting Started"
-format: html
+format:
+  html: 
+    other-links:
+      - href: https://ghassem.com
+        icon: home
+        text: Ghassem Tofighi
+  typst: default
+  revealjs:
+    width: 1600
+    output-file: ml-index.html
+    center-title-slide: false
+    smaller: true
+    scrollable: true
+creator: "@tofighi"
 comments:
   hypothesis: true
 ---
