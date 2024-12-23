@@ -14,11 +14,9 @@ resources:
 creator: "@tofighi"
 ---
 
-
 ::: {.hero-banner}
 
 ::: {.content-block}
-
 
 ::: {.hero-text}
 # Welcome to Ghassem's Courses
@@ -31,22 +29,21 @@ creator: "@tofighi"
 [Guide](docs/guide/){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 ::: 
 -->
-
 :::
 
 
-<!--
 ::: {.hero-animation}
+
 <video autoplay muted playsinline loop>
 <source src="images/hero_animation.mp4" type="video/mp4"/>
 </video>
 :::
--->
-
-::: <!-- {/.content-block} -->
 
 
-::: <!-- {/.hero-banner} -->
+:::
+
+
+:::
 
 
 ::: {.hello-quarto .alt-background}
@@ -311,4 +308,5 @@ Publish collections of documents as a blog or full website. Create books and man
 
 :::
 :::
+
 
