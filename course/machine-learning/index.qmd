@@ -7,7 +7,7 @@ format:
     other-links:
       - href: https://ghassem.com
         icon: speedometer
-        text: Ghassem Tofighi
+        text: Ghassem Tofighiwpe
   typst: default
   revealjs:
     output-file: index-reveal.html
@@ -73,7 +73,7 @@ Our videos have been viewed over 6,000,000 times already! Take a look at the [do
 
 I am Ghassem
 
-![Ghassem Tofighi](images/GhassemTofighi.webp)
+![Ghassem Tofighi](images/GhassemTofighi.jpg)
 
 :::
 
