@@ -15,7 +15,7 @@ format:
     center-title-slide: false
     smaller: true
     scrollable: true
-    footer: [Course homepage](index.qmd)
+    footer: <a href="ghassem.com">Ghassem</a>
 creator: "@tofighi"
 ---
 
@@ -27,7 +27,9 @@ creator: "@tofighi"
 
 ::: {layout="[30,70]"}
 
-![](images/pencil_sketch.png)
+![](images/8-gif.gif)
+
+
 
 This  course is designed with some coding experience who want to learn how to apply  machine learning to practical problems.
 
