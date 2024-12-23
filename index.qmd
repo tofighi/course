@@ -38,7 +38,7 @@ A course about machine learning and its applications, exploring the foundational
 :::
 
 ::: {.learn-more}
-[Learn more »](course/machine-learning/index.qmd)
+[Learn more »](course/machine-learning)
 :::
 :::
 
