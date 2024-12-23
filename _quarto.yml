@@ -77,13 +77,34 @@ website:
         text: GitHub 
 
   sidebar:
-    - id: assignments
+    - id: policies
       collapse-level: 3
       contents:
         - section: "Assignments"
           contents:
             - docs/assignments/index.qmd
+        - section: "Attendance"
+          contents:
             - docs/assignments/about.qmd
+  
+    - id: machine-learning
+      collapse-level: 3
+      contents:
+        - section: "Machine Learning"
+          href: docs/deep-learning/index.qmd
+          contents:
+          - section: Chapter 1
+            contents:
+              - docs/deep-learning/lesson1.qmd
+              - docs/deep-learning/lesson1.qmd
+              - section: Summaries
+                contents:
+                  - course/machine-learning/index.qmd
+          - text: "---"
+          - section: Chapter 2
+            contents:
+              - course/machine-learning/index.qmd
+    
     - id: deep-learning
       collapse-level: 3
       contents:
