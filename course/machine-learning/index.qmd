@@ -71,9 +71,9 @@ Our videos have been viewed over 6,000,000 times already! Take a look at the [do
 
 ::: {layout="[70,30]"}
 
-I am Jeremy Howard, your guide on this journey. I lead the development of fastai, the software that you'll be using throughout this course. I have been using and teaching machine learning for around 30 years. I was the top-ranked competitor globally in machine learning competitions on Kaggle (the world's largest machine learning community) two years running. Following this success, I became the President and Chief Scientist of Kaggle. Since first using neural networks 25 years ago, I have led many companies and projects that have machine learning at their core, including founding the first company to focus on deep learning and medicine, Enlitic (chosen by MIT Tech Review as one of the "world's smartest companies"). 
+I am Ghassem
 
-![Jeremy Howard](images/people/jeremy.jpg)
+![Ghassem Tofighi](images/GhassemTofighi.webp)
 
 :::
 
