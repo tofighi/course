@@ -9,7 +9,7 @@ format:
   typst: default
   revealjs:
     width: 1600
-    output-file: ml-index.html
+    output-file: chapter1-lesson1.html
     center-title-slide: false
     smaller: true
     scrollable: true
