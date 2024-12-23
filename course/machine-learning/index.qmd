@@ -15,6 +15,7 @@ format:
     center-title-slide: false
     smaller: true
     scrollable: true
+    footer: [Course homepage](index.qmd)
 creator: "@tofighi"
 ---
 
