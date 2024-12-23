@@ -1,12 +1,13 @@
 ---
 title: "Machine Learning"
+image: false
 description: A Machine Learning course for students
 format:
   html: 
     other-links:
       - href: https://ghassem.com
         icon: speedometer
-        text: Dashboard
+        text: Ghassem Tofighi
   typst: default
   revealjs:
     output-file: index-reveal.html
