@@ -1,0 +1,639 @@
+[
+  {
+    "objectID": "course/machine-learning/contents/preface.html",
+    "href": "course/machine-learning/contents/preface.html",
+    "title": "Template",
+    "section": "",
+    "text": "New!\n\n\n\nWe just launched a new &gt;30 hour video course for more experienced students:\nPractical Deep Learning for Coders part 2: Deep Learning Foundations to Stable Diffusion"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#data-storage",
+    "href": "course/machine-learning/contents/preface.html#data-storage",
+    "title": "Template",
+    "section": "Data Storage",
+    "text": "Data Storage\nData sourcing and data storage go hand-in-hand and it is necessary to store data in a format that facilitates easy access and processing. Depending on the use case, there are various kinds of data storage systems that can be used to store your datasets. Some examples are shown in Table 1.\n\n\n\nTable 1: Comparative overview of database, data warehouse, and data lake.\n\n\n\n\n\n\n\n\n\n\n\n\nDatabase\nData Warehouse\nData Lake\n\n\n\n\nPurpose\nOperational and transactional\nAnalytical\nAnalytical\n\n\nData type\nStructured\nStructured\nStructured, semi-structured and/or unstructured\n\n\nScale\nSmall to large volumes of data\nLarge volumes of integrated data\nLarge volumes of diverse data\n\n\nExamples** My\nSQL Go\nogle BigQuery, Go Amazon Redshift, Microsoft Azure Synapse.\nogle Cloud Storage, AWS S3, Azure Data Lake Storage"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#table",
+    "href": "course/machine-learning/contents/preface.html#table",
+    "title": "Template",
+    "section": "Table",
+    "text": "Table\n\n\n\n\n\n\n\n\nPrecision\nPros\nCons\n\n\n\n\nFP32 (Floating Point 32-bit)\nStandard precision used in most deep learning frameworks. High accuracy due to ample representational capacity. Well-suited for training\nHigh memory usage. Slower inference times compared to quantized models. Higher energy consumption.\n\n\nFP16 (Floating Point 16-bit)\nReduces memory usage compared to FP32. Speeds up computations on hardware that supports FP16. Often used in mixed-precision training to balance speed and accuracy.\nLower representational capacity compared to FP32. Risk of numerical instability in some models or layers.\n\n\nINT8 (8-bit Integer)\nSignificantly reduced memory footprint compared to floating-point representations. Faster inference if hardware supports INT8 computations. Suitable for many post-training quantization scenarios.\nQuantization can lead to some accuracy loss. Requires careful calibration during quantization to minimize accuracy degradation.\n\n\nINT4 (4-bit Integer)\nEven lower memory usage than INT8. Further speed-up potential for inference.\nHigher risk of accuracy loss compared to INT8. Calibration during quantization becomes more critical.\n\n\nBinary\nMinimal memory footprint (only 1 bit per parameter). Extremely fast inference due to bitwise operations. Power efficient.\nSignificant accuracy drop for many tasks. Complex training dynamics due to extreme quantization.\n\n\nTernary\nLow memory usage but slightly more than binary. Offers a middle ground between representation and efficiency.\nAccuracy might still be lower than higher precision models. Training dynamics can be complex.\n\n\n\n\nEfficiency Comparisons\nThere is an abundance of models in the ecosystem, each boasting its unique strengths and idiosyncrasies. However, pure model accuracy figures or training and inference speeds don’t paint the complete picture. When we dive deeper into comparative analyses, several critical nuances emerge.\nOften, we encounter the delicate balance between accuracy and efficiency. For instance, while a dense deep learning model and a lightweight MobileNet variant might both excel in image classification, their computational demands could be at two extremes. This differentiation is especially pronounced when comparing deployments on resource-abundant cloud servers versus constrained TinyML devices. In many real-world scenarios, the marginal gains in accuracy could be overshadowed by the inefficiencies of a resource-intensive model.\nMoreover, the optimal model choice isn’t always universal but often depends on the specifics of an application. Consider object detection: a model that excels in general scenarios might falter in niche environments like detecting manufacturing defects on a factory floor. This adaptability—or the lack of it—can dictate a model’s real-world utility.\nAnother important consideration is the relationship between model complexity and its practical benefits. Take voice-activated assistants as an example such as “Alexa” or “OK Google.” While a complex model might demonstrate a marginally superior understanding of user speech, if it’s slower to respond than a simpler counterpart, the user experience could be compromised. Thus, adding layers or parameters doesn’t always equate to better real-world outcomes.\nFurthermore, while benchmark datasets, such as ImageNet (russakovsky2015imagenet?), COCO (lin2014microsoft?), Visual Wake Words (chowdhery2019visual?), Google Speech Commands (warden2018speech?), etc. provide a standardized performance metric, they might not capture the diversity and unpredictability of real-world data. Two facial recognition models with similar benchmark scores might exhibit varied competencies when faced with diverse ethnic backgrounds or challenging lighting conditions. Such disparities underscore the importance of robustness and consistency across varied data. For example, Figure 1 from the Dollar Street dataset shows stove images across extreme monthly incomes. So if a model was trained on pictures of stoves found in wealth countries only, it will fail to recognize stoves from poorer regions.\n\n\n\n\n\n\nFigure 1: Objects, such as stoves, have different shapes and technological levels in different regions. A model that is not trained on diverse datasets might perform well on a benchmark but fail in real-world applications. Source: Dollar Street stove images.\n\n\n\nIn essence, a thorough comparative analysis transcends numerical metrics. It’s a holistic assessment, intertwined with real-world applications, costs, and the intricate subtleties that each model brings to the table. This is why it becomes important to have standard benchmarks and metrics that are widely established and adopted by the community."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#formulas",
+    "href": "course/machine-learning/contents/preface.html#formulas",
+    "title": "Template",
+    "section": "Formulas",
+    "text": "Formulas\n\n\\(\\pi \\approx 3.14159\\)\n\\(\\pm \\, 0.2\\)\n\\(\\dfrac{0}{1} \\neq \\infty\\)\n\\(0 &lt; x &lt; 1\\)\n\\(0 \\leq x \\leq 1\\)\n\\(x \\geq 10\\)\n\\(\\forall \\, x \\in (1,2)\\)\n\\(\\exists \\, x \\notin [0,1]\\)\n\\(A \\subset B\\)\n\\(A \\subseteq B\\)\n\\(A \\cup B\\)\n\\(A \\cap B\\)\n\\(X \\implies Y\\)\n\\(X \\impliedby Y\\)\n\\(a \\to b\\)\n\\(a \\longrightarrow b\\)\n\\(a \\Rightarrow b\\)\n\\(a \\Longrightarrow b\\)\n\\(a \\propto b\\)\n\n\\[\\color{red}{X \\sim Normal \\; (\\mu,\\sigma^2)}\\]"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#overview",
+    "href": "course/machine-learning/contents/preface.html#overview",
+    "title": "Template",
+    "section": "Overview",
+    "text": "Overview\nUse the html format to create HTML output. For example:\n---\ntitle: \"My document\"\nformat:\n  html:\n    toc: true\n    html-math-method: katex\n    css: styles.css\n---\nThis example highlights a few of the options available for HTML output. This document covers these and other options in detail. See the HTML format reference for a complete list of all available options."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#table-of-contents",
+    "href": "course/machine-learning/contents/preface.html#table-of-contents",
+    "title": "Template",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nUse the toc option to include an automatically generated table of contents in the output document. Use the toc-depth option to specify the number of section levels to include in the table of contents. The default is 3 (which means that level-1, 2, and 3 headings will be listed in the contents). For example:\ntoc: true\ntoc-depth: 2\nUse the toc-expand option to specify how much of the table of contents to show initially (defaults to 1 with auto-expansion as the user scrolls). Use true to expand all or false to collapse all.\ntoc: true\ntoc-expand: 2\nYou can customize the title used for the table of contents using the toc-title option:\ntoc-title: Contents\nIf you want to exclude a heading from the table of contents, add both the .unnumbered and .unlisted classes to it:\n### More Options {.unnumbered .unlisted}\nThe HTML format by default floats the table of contents to the right. You can alternatively position it at the left, or in the body. For example:\nformat:\n  html:\n    toc: true\n    toc-location: left\nThe floating table of contents can be used to navigate to sections of the document and also will automatically highlight the appropriate section as the user scrolls. The table of contents is responsive and will become hidden once the viewport becomes too narrow. See an example on the right of this page.\nNote that the toc-location option is not available when you disable the standard HTML theme (e.g. if you specify the theme: none or theme: pandoc option)."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#css-styles",
+    "href": "course/machine-learning/contents/preface.html#css-styles",
+    "title": "Template",
+    "section": "CSS Styles",
+    "text": "CSS Styles\nTo add a CSS stylesheet to your document, just provide the css option. For example:\nformat:\n  html: \n    css: styles.css\nUsing the css option works well for simple tweaks to document appearance. If you want to do more extensive customization see the documentation on HTML Themes."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#latex-equations",
+    "href": "course/machine-learning/contents/preface.html#latex-equations",
+    "title": "Template",
+    "section": "LaTeX Equations",
+    "text": "LaTeX Equations\nBy default, LaTeX equations are rendered using MathJax. Use the html-math-method option to choose another method. For example:\nformat:\n  html:\n    html-math-method: katex\nYou can also specify a url for the library to load for a given method:\nhtml-math-method:\n  method: mathjax\n  url: \"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"\nAvailable math rendering methods include:\n\n\n\nMethod\nDescription\n\n\n\n\nmathjax\nUse MathJax to display embedded TeX math in HTML output. The default configuration for MathJax is tex-chtml-full.js which loads all MathJax’s extensions except colorv2 and physics (available using \\require{physics}).\n\n\nkatex\nUse KaTeX to display embedded TeX math in HTML output.\n\n\nwebtex\nConvert TeX formulas to &lt;img&gt; tags that link to an external script that converts formulas to images.\n\n\ngladtex\nEnclose TeX math in &lt;eq&gt; tags in HTML output. The resulting HTML can then be processed by GladTeX to produce images of the typeset formulas and an HTML file with links to these images.\n\n\nmathml\nConvert TeX math to MathML (note that currently only Firefox and Safari natively support MathML)\n\n\nplain\nNo special processing (formulas are put inside a span with class=\"math\").\n\n\n\nNote that there is more detailed documentation on each of these options in the Pandoc Math Rendering in HTML documentation."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#tabsets",
+    "href": "course/machine-learning/contents/preface.html#tabsets",
+    "title": "Template",
+    "section": "Tabsets",
+    "text": "Tabsets\nYou can use tabsets to present content that will vary in interest depending on the audience. For example, here we provide some example code in a variety of languages:\n\nRPythonJavaJulia\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)\n\n\npublic class FizzBuzz\n{\n  public static void fizzBuzz(int num)\n  {\n    if (num % 15 == 0) {\n      System.out.println(\"FizzBuzz\");\n    } else if (num % 5 == 0) {\n      System.out.println(\"Buzz\");\n    } else if (num % 3 == 0) {\n      System.out.println(\"Fizz\");\n    } else {\n      System.out.println(num);\n    }\n  }\n}\n\n\nfunction FizzBuzz(num)\n  if num % 15 == 0\n    println(\"FizzBuzz\")\n  elseif num % 5 == 0\n    println(\"Buzz\")\n  elseif num % 3 == 0\n    println(\"Fizz\")\n  else\n    println(num)\n  end\nend\n\n\n\nCreate a tabset via a markdown div with the class name panel-tabset (e.g. ::: {.panel-tabset}). Each top-level heading within the div creates a new tab. For example, here is the markdown used to implement the first two tabs displayed above:\n::: {.panel-tabset}\n## R\n\n``` {.r}\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n```\n\n## Python\n\n``` {.python}\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)\n```\n\n:::\n\nTabset Groups\nIf you have multiple tabsets that include the same tab names, you can define a tabset group. Tabs within a group are all switched together (so in the example above once a reader switches to R or Python in one tabset the others will follow along). For example:\n::: {.panel-tabset group=\"language\"}\n## R\n\nTab content\n\n## Python\n\nTab content\n:::"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#self-contained",
+    "href": "course/machine-learning/contents/preface.html#self-contained",
+    "title": "Template",
+    "section": "Self Contained",
+    "text": "Self Contained\nHTML documents typically have a number of external dependencies (e.g. images, CSS style sheets, JavaScript, etc.). By default these dependencies are placed in a _files directory alongside your document. For example, if you render report.qmd to HTML:\n\n\nTerminal\n\nquarto render report.qmd --to html\n\nThen the following output is produced:\nreport.html\nreport_files/\nYou might alternatively want to create an entirely self-contained HTML document (with images, CSS style sheets, JavaScript, etc. embedded into the HTML file). You can do this by specifying the embed-resources option:\nformat:\n  html:\n    embed-resources: true\nThis will produce a standalone HTML file with no external dependencies, using data: URIs to incorporate the contents of linked scripts, style sheets, images, and videos. The resulting file should be self contained, in the sense that it needs no external files and no net access to be displayed properly by a browser."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#anchor-sections",
+    "href": "course/machine-learning/contents/preface.html#anchor-sections",
+    "title": "Template",
+    "section": "Anchor Sections",
+    "text": "Anchor Sections\nHover over a section title to see an anchor link. Enable/disable this behavior with:\nformat:\n  html:\n    anchor-sections: true\nAnchor links are also automatically added to figures and tables that have a cross reference defined."
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#smooth-scrolling",
+    "href": "course/machine-learning/contents/preface.html#smooth-scrolling",
+    "title": "Template",
+    "section": "Smooth Scrolling",
+    "text": "Smooth Scrolling\nEnable smooth scrolling within the page. By default, smooth scroll is not enabled. Enable/disable it with:\nformat:\n  html:\n    smooth-scroll: true"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#external-links",
+    "href": "course/machine-learning/contents/preface.html#external-links",
+    "title": "Template",
+    "section": "External Links",
+    "text": "External Links\nBy default external links (i.e. links that don’t target the current site) receive no special visual adornment or navigation treatment (the current page is navigated). You can use the following options to modify this behavior:\n\n\n\nOption\nDescription\n\n\n\n\nlink-external-icon\ntrue to show an icon next to the link to indicate that it’s external (e.g. external).\n\n\nlink-external-newwindow\ntrue to open external links in a new browser window or tab (rather than navigating the current tab).\n\n\nlink-external-filter\nA regular expression that can be used to determine whether a link is an internal link. For example\n^(?:http:|https:)\\/\\/www\\.quarto\\.org\\/custom\nwill treat links that start with http://www.quarto.org as internal links (and others will be considered external).\n\n\n\nExternal links are identified either using the site-url (if provided) or using the window.host if no site-url or link-external-filter is provided. For example, here we enable both options and a custom filter:\nformat:\n  html:\n    link-external-icon: true\n    link-external-newwindow: true\n    link-external-filter: '^(?:http:|https:)\\/\\/www\\.quarto\\.org\\/custom'\nYou can also specify one or both of these behaviors for an individual link using the .external class and target attribute. For example:\n[example](https://example.com){.external target=\"_blank\"}"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#reference-popups",
+    "href": "course/machine-learning/contents/preface.html#reference-popups",
+    "title": "Template",
+    "section": "Reference Popups",
+    "text": "Reference Popups\nIf you hover your mouse over the citation and footnote in this sentence you’ll see a popup displaying the reference contents:\n   Hover over Xie (2015) to see a reference to the definitive book on knitr1.\nThis behavior is enabled by default. You can disable it with the following options:\nformat:\n  html:\n    citations-hover: false\n    footnotes-hover: false"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#commenting",
+    "href": "course/machine-learning/contents/preface.html#commenting",
+    "title": "Template",
+    "section": "Commenting",
+    "text": "Commenting\nThis page has commenting with Hypothes.is enabled via the following YAML option:\ncomments:\n  hypothesis: true\nYou can see the Hypothesis UI at the far right of the page. Rather than true, you can specify any of the available Hypothesis embedding options as a sub-key of hypothesis. For example:\ncomments:\n  hypothesis: \n    theme: clean\nYou can enable Utterances commenting using the utterances option. Here you need to specify at least the GitHub repo you want to use for storing comments:\ncomments:\n  utterances:\n    repo: quarto-dev/quarto-docs\nYou can also specify the other options documented here.\nYou may also enable Giscus for commenting using the giscus option. Giscus will store comments in the ‘Discussions’ of a Github repo.\ncomments:\n  giscus: \n    repo: quarto-dev/quarto-docs\nLike utterances, you need to specify at least the Git repo you want to use for storing comments. In addition, the repo that you use must:\n\nBe public\nHave the Giscus app installed.\nHave discussion enabled\n\nReview the Giscus documentation for instructions on setting up Giscus in your repository. Additional options are covered here.\n\nDisabling Comments\nIf you have comments enabled for an entire website or book, you can selectively disable comments for a single page by specifying comments: false. For example:\ntitle: \"Home Page\"\ncomments: false"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#includes",
+    "href": "course/machine-learning/contents/preface.html#includes",
+    "title": "Template",
+    "section": "Includes",
+    "text": "Includes\nFor example:\nformat:\n  html:\n    include-in-header:\n      - text: |\n          &lt;script src=\"https://examples.org/demo.js\"&gt;&lt;/script&gt;\n      - file: analytics.html\n      - comments.html\n    include-before-body: header.html"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#minimal-html",
+    "href": "course/machine-learning/contents/preface.html#minimal-html",
+    "title": "Template",
+    "section": "Minimal HTML",
+    "text": "Minimal HTML\nThe default Quarto HTML output format includes several features by default, including bootstrap themes, anchor sections, reference popups, tabsets, code block copying, and responsive figures. You can disable all of these built in features at once using the minimal option. For example:\n---\ntitle: \"My Document\"\nformat:\n  html:\n    minimal: true\n---\nWhen specifying minimal: true you can still selectively re-enable features you do want, for example:\n---\ntitle: \"My Document\"\nformat:\n  html:\n    minimal: true\n    code-copy: true\n---"
+  },
+  {
+    "objectID": "course/machine-learning/contents/preface.html#footnotes",
+    "href": "course/machine-learning/contents/preface.html#footnotes",
+    "title": "Template",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nknitr is an R package for creating dynamic documents.↩︎"
+  },
+  {
+    "objectID": "course/machine-learning/index.html",
+    "href": "course/machine-learning/index.html",
+    "title": "Machine Learning",
+    "section": "",
+    "text": "Welcome!\n\n\n\nCourse homepage",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#welcome-1",
+    "href": "course/machine-learning/index.html#welcome-1",
+    "title": "Machine Learning",
+    "section": "Welcome!",
+    "text": "Welcome!\nMachine Learning\n\n\n\n\n\n\n\n\n\n\nBuild and train deep learning models for computer vision, natural language processing, tabular analysis, and collaborative filtering problems\nCreate random forests and regression models\nDeploy models\nUse PyTorch, the world’s fastest growing deep learning software, plus popular libraries like fastai and Hugging Face\n\n\n\n\nYou don’t need any special hardware or software — we’ll show you how to use free resources for both building and deploying models. You don’t need any university math either — we’ll teach you the calculus and linear algebra you need during the course.\n\n\n\n\n\n\nGet started\n\n\n\nStart watching lesson 1 now!",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#real-results",
+    "href": "course/machine-learning/index.html#real-results",
+    "title": "Machine Learning",
+    "section": "Real results",
+    "text": "Real results\nOur videos have been viewed over 6,000,000 times already! Take a look at the dozens of testimonials about our book and course by alumni, top academics, and industry experts.\n\n\n\n\n\n\n\n‘Deep Learning is for everyone’ we see in Chapter 1, Section 1 of this book, and while other books may make similar claims, this book delivers on the claim. The authors have extensive knowledge of the field but are able to describe it in a way that is perfectly suited for a reader with experience in programming but not in machine learning. The book shows examples first, and only covers theory in the context of concrete examples. For most people, this is the best way to learn. The book does an impressive job of covering the key applications of deep learning in computer vision, natural language processing, and tabular data processing, but also covers key topics like data ethics that some other books miss. Altogether, this is one of the best sources for a programmer to become proficient in deep learning.",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#change-when-appearance-starts",
+    "href": "course/machine-learning/index.html#change-when-appearance-starts",
+    "title": "Machine Learning",
+    "section": "Change when appearance starts",
+    "text": "Change when appearance starts\n\nThis is list item 1\nThis is list item 2\nThis is list item 3",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#your-instructor",
+    "href": "course/machine-learning/index.html#your-instructor",
+    "title": "Machine Learning",
+    "section": "Your instructor",
+    "text": "Your instructor\n\n\n\n\n\n\nI am Ghassem\n\n\n\n\n\nGhassem Tofighi\n\n\n\n\n\n\n\n\n\n\n\nGet started\n\n\n\nStart watching lesson 1 now!",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#is-this-course-for-me",
+    "href": "course/machine-learning/index.html#is-this-course-for-me",
+    "title": "Machine Learning",
+    "section": "Is this course for me?",
+    "text": "Is this course for me?\nIt doesn’t matter if you don’t come from a technical or a mathematical background (though it’s okay if you do too!); we wrote this course to make deep learning accessible to as many people as possible. The only prerequisite is that you know how to code (a year of experience is enough), preferably in Python, and that you have at least followed a high school math course.\nDeep learning is a computer technique to extract and transform data–-with use cases ranging from human speech recognition to animal imagery classification–-by using multiple layers of neural networks. A lot of people assume that you need all kinds of hard-to-find stuff to get great results with deep learning, but as you’ll see in this course, those people are wrong. Here’s a few things you absolutely don’t need to do world-class deep learning:\n\n\n\n\n\n\n\nMyth (don’t need)\nTruth\n\n\n\n\nLots of math\nJust high school math is sufficient\n\n\nLots of data\nWe’ve seen record-breaking results with &lt;50 items of data\n\n\nLots of expensive computers\nYou can get what you need for state of the art work for free\n\n\n\n\n\n\n\n\n\nGet started\n\n\n\nStart watching lesson 1 now!",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#the-software-you-will-be-using",
+    "href": "course/machine-learning/index.html#the-software-you-will-be-using",
+    "title": "Machine Learning",
+    "section": "The software you will be using",
+    "text": "The software you will be using\nIn this course, you’ll be using PyTorch, fastai, Hugging Face Transformers, and Gradio.\nWe’ve completed hundreds of machine learning projects using dozens of different packages, and many different programming languages. At fast.ai, we have written courses using most of the main deep learning and machine learning packages used today. We spent over a thousand hours testing PyTorch before deciding that we would use it for future courses, software development, and research. PyTorch is now the world’s fastest-growing deep learning library and is already used for most research papers at top conferences.\nPyTorch works best as a low-level foundation library, providing the basic operations for higher-level functionality. The fastai library one of the most popular libraries for adding this higher-level functionality on top of PyTorch. In this course, as we go deeper and deeper into the foundations of deep learning, we will also go deeper and deeper into the layers of fastai.\nTransformers is a popular library focused on natural language processing (NLP) using transformers models. In the course you’ll see how to create a cutting-edge transfomers model using this library to detect similar concepts in patent applications.",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#why-mahcine-learning",
+    "href": "course/machine-learning/index.html#why-mahcine-learning",
+    "title": "Machine Learning",
+    "section": "Why Mahcine Learning?",
+    "text": "Why Mahcine Learning?\nDeep learning has power, flexibility, and simplicity. That’s why we believe it should be applied across many disciplines. These include the social and physical sciences, the arts, medicine, finance, scientific research, and many more. Here’s a list of some of the thousands of tasks in different areas at which deep learning, or methods heavily using deep learning, is now the best in the world:\n\nNatural language processing (NLP) Answering questions; speech recognition; summarizing documents; classifying documents; finding names, dates, etc. in documents; searching for articles mentioning a concept\nComputer vision Satellite and drone imagery interpretation (e.g., for disaster resilience); face recognition; image captioning; reading traffic signs; locating pedestrians and vehicles in autonomous vehicles\nMedicine Finding anomalies in radiology images, including CT, MRI, and X-ray images; counting features in pathology slides; measuring features in ultrasounds; diagnosing diabetic retinopathy\nBiology Folding proteins; classifying proteins; many genomics tasks, such as tumor-normal sequencing and classifying clinically actionable genetic mutations; cell classification; analyzing protein/protein interactions\nImage generation Colorizing images; increasing image resolution; removing noise from images; converting images to art in the style of famous artists\nRecommendation systems Web search; product recommendations; home page layout\nPlaying games Chess, Go, most Atari video games, and many real-time strategy games\nRobotics Handling objects that are challenging to locate (e.g., transparent, shiny, lacking texture) or hard to pick up\nOther applications Financial and logistical forecasting, text to speech, and much more…",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/index.html#what-you-will-learn",
+    "href": "course/machine-learning/index.html#what-you-will-learn",
+    "title": "Machine Learning",
+    "section": "What you will learn",
+    "text": "What you will learn\nAfter finishing this course you will know:\n\nHow to train models that achieve state-of-the-art results in:\n\nComputer vision, including image classification (e.g., classifying pet photos by breed)\nNatural language processing (NLP), including document classification (e.g., movie review sentiment analysis) and phrase similarity\nTabular data with categorical data, continuous data, and mixed data\nCollaborative filtering (e.g., movie recommendation)\n\nHow to turn your models into web applications, and deploy them\nWhy and how deep learning models work, and how to use that knowledge to improve the accuracy, speed, and reliability of your models\nThe latest deep learning techniques that really matter in practice\nHow to implement stochastic gradient descent and a complete training loop from scratch\n\nHere are some of the techniques covered (don’t worry if none of these words mean anything to you yet–you’ll learn them all soon):\n\nRandom forests and gradient boosting\nAffine functions and nonlinearities\nParameters and activations\nTransfer learning\nStochastic gradient descent (SGD)\nData augmentation\nWeight decay\nImage classification\nEntity and word embeddings\nAnd much more\n\n\n\n\n\n\n\nGet started\n\n\n\nStart watching lesson 1 now!",
+    "crumbs": [
+      "Machine Learning"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#welcome-1",
+    "href": "course/machine-learning/ml-index.html#welcome-1",
+    "title": "Machine Learning",
+    "section": "Welcome!",
+    "text": "Welcome!\nMachine Learning\n\n\n\n\n\n\n\n\n\n\nBuild and train deep learning models for computer vision, natural language processing, tabular analysis, and collaborative filtering problems\nCreate random forests and regression models\nDeploy models\nUse PyTorch, the world’s fastest growing deep learning software, plus popular libraries like fastai and Hugging Face\n\n\n\n\nYou don’t need any special hardware or software — we’ll show you how to use free resources for both building and deploying models. You don’t need any university math either — we’ll teach you the calculus and linear algebra you need during the course.\n\n\n\n\n\n\nGet started\n\n\nStart watching lesson 1 now!"
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#real-results",
+    "href": "course/machine-learning/ml-index.html#real-results",
+    "title": "Machine Learning",
+    "section": "Real results",
+    "text": "Real results\nOur videos have been viewed over 6,000,000 times already! Take a look at the dozens of testimonials about our book and course by alumni, top academics, and industry experts.\n\n\n\n\n\n\n\n‘Deep Learning is for everyone’ we see in Chapter 1, Section 1 of this book, and while other books may make similar claims, this book delivers on the claim. The authors have extensive knowledge of the field but are able to describe it in a way that is perfectly suited for a reader with experience in programming but not in machine learning. The book shows examples first, and only covers theory in the context of concrete examples. For most people, this is the best way to learn. The book does an impressive job of covering the key applications of deep learning in computer vision, natural language processing, and tabular data processing, but also covers key topics like data ethics that some other books miss. Altogether, this is one of the best sources for a programmer to become proficient in deep learning."
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#change-when-appearance-starts",
+    "href": "course/machine-learning/ml-index.html#change-when-appearance-starts",
+    "title": "Machine Learning",
+    "section": "Change when appearance starts",
+    "text": "Change when appearance starts\n\nThis is list item 1\nThis is list item 2\nThis is list item 3"
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#your-instructor",
+    "href": "course/machine-learning/ml-index.html#your-instructor",
+    "title": "Machine Learning",
+    "section": "Your instructor",
+    "text": "Your instructor\n\n\n\n\n\n\nI am Ghassem\n\n\n\n\n\nGhassem Tofighi\n\n\n\n\n\n\n\n\n\n\n\nGet started\n\n\nStart watching lesson 1 now!"
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#is-this-course-for-me",
+    "href": "course/machine-learning/ml-index.html#is-this-course-for-me",
+    "title": "Machine Learning",
+    "section": "Is this course for me?",
+    "text": "Is this course for me?\nIt doesn’t matter if you don’t come from a technical or a mathematical background (though it’s okay if you do too!); we wrote this course to make deep learning accessible to as many people as possible. The only prerequisite is that you know how to code (a year of experience is enough), preferably in Python, and that you have at least followed a high school math course.\nDeep learning is a computer technique to extract and transform data–-with use cases ranging from human speech recognition to animal imagery classification–-by using multiple layers of neural networks. A lot of people assume that you need all kinds of hard-to-find stuff to get great results with deep learning, but as you’ll see in this course, those people are wrong. Here’s a few things you absolutely don’t need to do world-class deep learning:\n\n\n\n\n\n\n\nMyth (don’t need)\nTruth\n\n\n\n\nLots of math\nJust high school math is sufficient\n\n\nLots of data\nWe’ve seen record-breaking results with &lt;50 items of data\n\n\nLots of expensive computers\nYou can get what you need for state of the art work for free\n\n\n\n\n\n\n\n\n\nGet started\n\n\nStart watching lesson 1 now!"
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#the-software-you-will-be-using",
+    "href": "course/machine-learning/ml-index.html#the-software-you-will-be-using",
+    "title": "Machine Learning",
+    "section": "The software you will be using",
+    "text": "The software you will be using\nIn this course, you’ll be using PyTorch, fastai, Hugging Face Transformers, and Gradio.\nWe’ve completed hundreds of machine learning projects using dozens of different packages, and many different programming languages. At fast.ai, we have written courses using most of the main deep learning and machine learning packages used today. We spent over a thousand hours testing PyTorch before deciding that we would use it for future courses, software development, and research. PyTorch is now the world’s fastest-growing deep learning library and is already used for most research papers at top conferences.\nPyTorch works best as a low-level foundation library, providing the basic operations for higher-level functionality. The fastai library one of the most popular libraries for adding this higher-level functionality on top of PyTorch. In this course, as we go deeper and deeper into the foundations of deep learning, we will also go deeper and deeper into the layers of fastai.\nTransformers is a popular library focused on natural language processing (NLP) using transformers models. In the course you’ll see how to create a cutting-edge transfomers model using this library to detect similar concepts in patent applications."
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#why-mahcine-learning",
+    "href": "course/machine-learning/ml-index.html#why-mahcine-learning",
+    "title": "Machine Learning",
+    "section": "Why Mahcine Learning?",
+    "text": "Why Mahcine Learning?\nDeep learning has power, flexibility, and simplicity. That’s why we believe it should be applied across many disciplines. These include the social and physical sciences, the arts, medicine, finance, scientific research, and many more. Here’s a list of some of the thousands of tasks in different areas at which deep learning, or methods heavily using deep learning, is now the best in the world:\n\nNatural language processing (NLP) Answering questions; speech recognition; summarizing documents; classifying documents; finding names, dates, etc. in documents; searching for articles mentioning a concept\nComputer vision Satellite and drone imagery interpretation (e.g., for disaster resilience); face recognition; image captioning; reading traffic signs; locating pedestrians and vehicles in autonomous vehicles\nMedicine Finding anomalies in radiology images, including CT, MRI, and X-ray images; counting features in pathology slides; measuring features in ultrasounds; diagnosing diabetic retinopathy\nBiology Folding proteins; classifying proteins; many genomics tasks, such as tumor-normal sequencing and classifying clinically actionable genetic mutations; cell classification; analyzing protein/protein interactions\nImage generation Colorizing images; increasing image resolution; removing noise from images; converting images to art in the style of famous artists\nRecommendation systems Web search; product recommendations; home page layout\nPlaying games Chess, Go, most Atari video games, and many real-time strategy games\nRobotics Handling objects that are challenging to locate (e.g., transparent, shiny, lacking texture) or hard to pick up\nOther applications Financial and logistical forecasting, text to speech, and much more…"
+  },
+  {
+    "objectID": "course/machine-learning/ml-index.html#what-you-will-learn",
+    "href": "course/machine-learning/ml-index.html#what-you-will-learn",
+    "title": "Machine Learning",
+    "section": "What you will learn",
+    "text": "What you will learn\nAfter finishing this course you will know:\n\nHow to train models that achieve state-of-the-art results in:\n\nComputer vision, including image classification (e.g., classifying pet photos by breed)\nNatural language processing (NLP), including document classification (e.g., movie review sentiment analysis) and phrase similarity\nTabular data with categorical data, continuous data, and mixed data\nCollaborative filtering (e.g., movie recommendation)\n\nHow to turn your models into web applications, and deploy them\nWhy and how deep learning models work, and how to use that knowledge to improve the accuracy, speed, and reliability of your models\nThe latest deep learning techniques that really matter in practice\nHow to implement stochastic gradient descent and a complete training loop from scratch\n\nHere are some of the techniques covered (don’t worry if none of these words mean anything to you yet–you’ll learn them all soon):\n\nRandom forests and gradient boosting\nAffine functions and nonlinearities\nParameters and activations\nTransfer learning\nStochastic gradient descent (SGD)\nData augmentation\nWeight decay\nImage classification\nEntity and word embeddings\nAnd much more\n\n\n\n\n\n\n\nGet started\n\n\nStart watching lesson 1 now!"
+  },
+  {
+    "objectID": "trademark.html",
+    "href": "trademark.html",
+    "title": "Trademark Policy",
+    "section": "",
+    "text": "This policy is adapted directly from the WordPress Foundation’s trademark policy for the WordPress and WordCamp names and logos. We admire the job that WordPress has done building a thriving open source community while at the same time making possible a wide variety of WordPress related businesses. We hope that this policy will help us do the same for Quarto."
+  },
+  {
+    "objectID": "trademark.html#goals",
+    "href": "trademark.html#goals",
+    "title": "Trademark Policy",
+    "section": "Goals",
+    "text": "Goals\nPosit, PBC owns and oversees the trademark for the Quarto name and logo. We have developed this trademark usage policy with the following goals in mind:\n\nWe’d like to make it easy for anyone to use the Quarto name or logo for community-oriented efforts that help spread and improve Quarto.\nWe’d like to make it clear how Quarto-related businesses and projects can (and cannot) use the Quarto name and logo.\nWe’d like to make it hard for anyone to use the Quarto name and logo to unfairly profit from, trick or confuse people who are looking for official Quarto resources.\n\nPlease note that it is not the goal of this policy to limit open source or commercial activity around Quarto. We actively encourage Quarto-based open source projects and businesses—our goal with this policy is to prevent confusion about the source of Quarto related software and services."
+  },
+  {
+    "objectID": "trademark.html#permission",
+    "href": "trademark.html#permission",
+    "title": "Trademark Policy",
+    "section": "Permission",
+    "text": "Permission\nPermission from Posit is required to use the Quarto name or logo as part of any project, product, service, domain name, or company name.\nWe will grant permission to use the Quarto name and logo for projects that meet the following criteria:\n\nThe primary purpose of your project is to promote the spread and improvement of the Quarto software.\nYour project is non-commercial in nature (it can make money to cover its costs or contribute to non-profit entities, but it cannot be run as a for-profit project or business).\nYour project neither promotes nor is associated with entities that currently fail to comply with the open source license under which Quarto is distributed.\n\nIf your project meets these criteria, you will be permitted to use the Quarto name and logo to promote your project in any way you see fit with these exceptions: (1) Please do not use Quarto as part of a domain name; and (2) We do not allow the use of the trademark in advertising, including AdSense/AdWords.\nAll other Quarto-related businesses or projects can use the Quarto name and logo to refer to and explain their services, but they cannot use them as part of a product, project, service, domain name, or company name and they cannot use them in any way that suggests an affiliation with or endorsement by the Quarto open source project.\nThe abbreviation “QMD” is not covered by the Quarto trademark and you are free to use it in any way you see fit."
+  },
+  {
+    "objectID": "trademark.html#examples",
+    "href": "trademark.html#examples",
+    "title": "Trademark Policy",
+    "section": "Examples",
+    "text": "Examples\nA consulting company can describe its business as “123 Publishing Services, offering Quarto consulting for publishers,” but cannot call its business “The Quarto Consulting Company.” Similarly, a business related to Quarto extensions can describe itself as “XYZ Extensions, the world’s best Quarto extensions,” but cannot call itself “The Quarto Extension Portal.”\nSimilarly, it’s OK to use the Quarto logo as part of a page that describes your products or services, but it is not OK to use it as part of your company or product logo or branding itself. Under no circumstances is it permitted to use Quarto as part of a domain name or top-level domain name.\nWhen in doubt about your use of the Quarto name or logo, please contact Posit at permissions@rstudio.com for clarification."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "about.html#project",
+    "href": "about.html#project",
+    "title": "About Courses",
+    "section": "Project",
+    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark."
+  },
+  {
+    "objectID": "about.html#contribute",
+    "href": "about.html#contribute",
+    "title": "About Courses",
+    "section": "Contribute",
+    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/&lt;username&gt;/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests."
+  },
+  {
+    "objectID": "docs/faq/index.html",
+    "href": "docs/faq/index.html",
+    "title": "Assignment Policy",
+    "section": "",
+    "text": "Please do NOT email the instructor regarding assignment extensions. Follow the late submission policy outlined in this document.\n\n\n\n\n\n\nNote\n\n\n\n\nIf your course has a TA, communicate with your TA about assignments, labs, or extension requests instead of the instructor.\n\nAssignments submitted by email or through any unapproved method will receive a grade of 0.\n\nAdhere strictly to the deadlines posted on the course calendar in the course shell."
+  },
+  {
+    "objectID": "docs/faq/index.html#assignment-submission",
+    "href": "docs/faq/index.html#assignment-submission",
+    "title": "Assignment Policy",
+    "section": "",
+    "text": "Please do NOT email the instructor regarding assignment extensions. Follow the late submission policy outlined in this document.\n\n\n\n\n\n\nNote\n\n\n\n\nIf your course has a TA, communicate with your TA about assignments, labs, or extension requests instead of the instructor.\n\nAssignments submitted by email or through any unapproved method will receive a grade of 0.\n\nAdhere strictly to the deadlines posted on the course calendar in the course shell."
+  },
+  {
+    "objectID": "docs/faq/index.html#late-assignment-submission",
+    "href": "docs/faq/index.html#late-assignment-submission",
+    "title": "Assignment Policy",
+    "section": "Late Assignment Submission",
+    "text": "Late Assignment Submission\nThis policy outlines the guidelines and penalties for assignment submissions, including late submission penalties, accommodations for students with special needs, and the process for requesting deadline extensions due to medical or reasonable issues.\n\n\n\n\n\n\nGeneral Late Submission Policy\n\n\n\nLate submissions are subject to the following penalties, as outlined in the table below:\n\n\n\n\n\n\n\nLate Submission Period\nPenalty\n\n\n\n\nUp to 24 hours after the deadline\n10% deduction from the total score\n\n\nUp to 48 hours after the deadline\n20% deduction from the total score\n\n\nUp to 72 hours after the deadline\n30% deduction from the total score\n\n\nMore than 72 hours after the deadline\nGrade of 0 will be assigned\n\n\n\n\nSubmissions through any method other than the designated course shell assignment folder will not be evaluated or graded.\n\n\nStudents With Accommodation Letters\nStudents with documented accommodation letters are eligible for an additional 72-hour extension for all assignments and projects. However:\n\nNo further extensions or grace periods are allowed beyond the extended deadline.\nSubmissions made after this extended deadline will receive a grade of 0.\n\n\n\nDeadline Extensions for Medical or Reasonable Issues\nIn cases where medical or reasonable issues prevent meeting a deadline, students must follow these procedures:\n\nSubmit relevant documentation (e.g., medical certificates or other supporting documents) to the instructor or department.\nThe instructor or department will review the documentation and decide whether to grant an extension.\nExtensions will not be granted at the time of the request but will be considered during the grading process.\nApproval of extension requests is at the sole discretion of the instructor or department.\n\nProviding documentation does not guarantee approval.\nStudents are advised to plan for the possibility of the extension request being denied and aim to submit assignments on time.\n\n\n\n\nDeadline Extension Announcements\nExtensions to deadlines will only occur if formally announced on the course announcements platform. Students should monitor these announcements regularly for updates.\n\n\nConclusion\nAll students are required to follow the submission deadlines and adhere to the late submission penalties outlined in this policy. Students with accommodations or legitimate medical/reasonable issues must follow the procedures detailed above and provide the required documentation. Extension decisions will be made objectively to ensure fairness and consistency."
+  },
+  {
+    "objectID": "docs/brand/index.html",
+    "href": "docs/brand/index.html",
+    "title": "Brand",
+    "section": "",
+    "text": "This is a document themed using brand.yml"
+  },
+  {
+    "objectID": "docs/brand/index.html#overview",
+    "href": "docs/brand/index.html#overview",
+    "title": "Brand",
+    "section": "",
+    "text": "This is a document themed using brand.yml"
+  },
+  {
+    "objectID": "docs/brand/index.html#subheading",
+    "href": "docs/brand/index.html#subheading",
+    "title": "Brand",
+    "section": "Subheading",
+    "text": "Subheading\nDuis ornare ex ac iaculis pretium. Maecenas sagittis odio id erat pharetra, sit amet consectetur quam sollicitudin. Vivamus pharetra quam purus, nec sagittis risus pretium at. Nullam feugiat, turpis ac accumsan interdum, sem tellus blandit neque, id vulputate diam quam semper nisl. Donec sit amet enim at neque porttitor aliquet. Phasellus facilisis nulla eget placerat eleifend. Vestibulum non egestas eros, eget lobortis ipsum. Nulla rutrum massa eget enim aliquam, id porttitor erat luctus. Nunc sagittis quis eros eu sagittis. Pellentesque dictum, erat at pellentesque sollicitudin, justo augue pulvinar metus, quis rutrum est mi nec felis. Vestibulum efficitur mi lorem, at elementum purus tincidunt a. Aliquam finibus enim magna, vitae pellentesque erat faucibus at. Nulla mauris tellus, imperdiet id lobortis et, dignissim condimentum ipsum. Morbi nulla orci, varius at aliquet sed, facilisis id tortor. Donec ut urna nisi."
+  },
+  {
+    "objectID": "docs/brand/index-reveal.html#overview",
+    "href": "docs/brand/index-reveal.html#overview",
+    "title": "Brand",
+    "section": "Overview",
+    "text": "Overview\nThis is a document themed using brand.yml"
+  },
+  {
+    "objectID": "docs/brand/index-reveal.html#subheading",
+    "href": "docs/brand/index-reveal.html#subheading",
+    "title": "Brand",
+    "section": "Subheading",
+    "text": "Subheading\nAenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
+  },
+  {
+    "objectID": "docs/assignments/index.html",
+    "href": "docs/assignments/index.html",
+    "title": "Assignment Policy",
+    "section": "",
+    "text": "Please do NOT email the instructor regarding assignment extensions. Follow the late submission policy outlined in this document.\n\n\n\n\n\n\nNote\n\n\n\n\nIf your course has a TA, communicate with your TA about assignments, labs, or extension requests instead of the instructor.\n\nAssignments submitted by email or through any unapproved method will receive a grade of 0.\n\nAdhere strictly to the deadlines posted on the course calendar in the course shell.",
+    "crumbs": [
+      "Assignments",
+      "Assignment Policy"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/index.html#assignment-submission",
+    "href": "docs/assignments/index.html#assignment-submission",
+    "title": "Assignment Policy",
+    "section": "",
+    "text": "Please do NOT email the instructor regarding assignment extensions. Follow the late submission policy outlined in this document.\n\n\n\n\n\n\nNote\n\n\n\n\nIf your course has a TA, communicate with your TA about assignments, labs, or extension requests instead of the instructor.\n\nAssignments submitted by email or through any unapproved method will receive a grade of 0.\n\nAdhere strictly to the deadlines posted on the course calendar in the course shell.",
+    "crumbs": [
+      "Assignments",
+      "Assignment Policy"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/index.html#late-assignment-submission",
+    "href": "docs/assignments/index.html#late-assignment-submission",
+    "title": "Assignment Policy",
+    "section": "Late Assignment Submission",
+    "text": "Late Assignment Submission\nThis policy outlines the guidelines and penalties for assignment submissions, including late submission penalties, accommodations for students with special needs, and the process for requesting deadline extensions due to medical or reasonable issues.\n\n\n\n\n\n\nGeneral Late Submission Policy\n\n\n\nLate submissions are subject to the following penalties, as outlined in the table below:\n\n\n\n\n\n\n\nLate Submission Period\nPenalty\n\n\n\n\nUp to 24 hours after the deadline\n10% deduction from the total score\n\n\nUp to 48 hours after the deadline\n20% deduction from the total score\n\n\nUp to 72 hours after the deadline\n30% deduction from the total score\n\n\nMore than 72 hours after the deadline\nGrade of 0 will be assigned\n\n\n\n\nSubmissions through any method other than the designated course shell assignment folder will not be evaluated or graded.\n\n\nStudents With Accommodation Letters\nStudents with documented accommodation letters are eligible for an additional 72-hour extension for all assignments and projects. However:\n\nNo further extensions or grace periods are allowed beyond the extended deadline.\nSubmissions made after this extended deadline will receive a grade of 0.\n\n\n\nDeadline Extensions for Medical or Reasonable Issues\nIn cases where medical or reasonable issues prevent meeting a deadline, students must follow these procedures:\n\nSubmit relevant documentation (e.g., medical certificates or other supporting documents) to the instructor or department.\nThe instructor or department will review the documentation and decide whether to grant an extension.\nExtensions will not be granted at the time of the request but will be considered during the grading process.\nApproval of extension requests is at the sole discretion of the instructor or department.\n\nProviding documentation does not guarantee approval.\nStudents are advised to plan for the possibility of the extension request being denied and aim to submit assignments on time.\n\n\n\n\nDeadline Extension Announcements\nExtensions to deadlines will only occur if formally announced on the course announcements platform. Students should monitor these announcements regularly for updates.\n\n\nConclusion\nAll students are required to follow the submission deadlines and adhere to the late submission penalties outlined in this policy. Students with accommodations or legitimate medical/reasonable issues must follow the procedures detailed above and provide the required documentation. Extension decisions will be made objectively to ensure fairness and consistency.",
+    "crumbs": [
+      "Assignments",
+      "Assignment Policy"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/about-assignments.html",
+    "href": "docs/assignments/about-assignments.html",
+    "title": "About Assignments",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "docs/assignments/about-assignments.html#goals",
+    "href": "docs/assignments/about-assignments.html#goals",
+    "title": "About Assignments",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "docs/assignments/about-assignments.html#project",
+    "href": "docs/assignments/about-assignments.html#project",
+    "title": "About Assignments",
+    "section": "Project",
+    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark."
+  },
+  {
+    "objectID": "docs/assignments/about-assignments.html#contribute",
+    "href": "docs/assignments/about-assignments.html#contribute",
+    "title": "About Assignments",
+    "section": "Contribute",
+    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/&lt;username&gt;/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests."
+  },
+  {
+    "objectID": "docs/assignments/about.html",
+    "href": "docs/assignments/about.html",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science.",
+    "crumbs": [
+      "Assignments",
+      "Attendance",
+      "About Courses"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/about.html#goals",
+    "href": "docs/assignments/about.html#goals",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science.",
+    "crumbs": [
+      "Assignments",
+      "Attendance",
+      "About Courses"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/about.html#project",
+    "href": "docs/assignments/about.html#project",
+    "title": "About Courses",
+    "section": "Project",
+    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark.",
+    "crumbs": [
+      "Assignments",
+      "Attendance",
+      "About Courses"
+    ]
+  },
+  {
+    "objectID": "docs/assignments/about.html#contribute",
+    "href": "docs/assignments/about.html#contribute",
+    "title": "About Courses",
+    "section": "Contribute",
+    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/&lt;username&gt;/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests.",
+    "crumbs": [
+      "Assignments",
+      "Attendance",
+      "About Courses"
+    ]
+  },
+  {
+    "objectID": "docs/about/about.html",
+    "href": "docs/about/about.html",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "docs/about/about.html#goals",
+    "href": "docs/about/about.html#goals",
+    "title": "About Courses",
+    "section": "",
+    "text": "The overarching goal of Quarto is to make the process of creating and collaborating on scientific and technical documents dramatically better. We hope to do this in several dimensions:\n\nCreate a writing and publishing environment with great integrated tools for technical content. We want to make authoring with embedded code, equations, figures, complex diagrams, interactive widgets, citations, cross references, and the myriad other special requirements of scientific discourse straightforward and productive for everyone.\nHelp authors take full advantage of the web as a connected, interactive platform for communications, while still providing the ability to create excellent printed output from the same document source. Researchers shouldn’t need to choose between LaTeX, MS Word, and HTML but rather be able to author documents that target all of them at the same time.\nMake reproducible research and publications the norm rather than the exception. Reproducibility requires that the code and data required to create a manuscript are an integrated part of it. However, this isn’t often straightforward in practice—Quarto aims to make it easier to adopt a reproducible workflow than not.\n\nQuarto is open source software. We believe that it’s better for everyone if the tools used for research and science are free and open. Reproducibility, widespread sharing of knowledge and techniques, and the leveling of the playing field by eliminating cost barriers are but a few of the shared benefits of free software in science."
+  },
+  {
+    "objectID": "docs/about/about.html#project",
+    "href": "docs/about/about.html#project",
+    "title": "About Courses",
+    "section": "Project",
+    "text": "Project\nAt the core of Quarto is Pandoc, a powerful and flexible document processing tool. Quarto adds a number of facilities to Pandoc aimed at scientific and technical publishing, including:\n\nEmbedding code and output from Python, R, and JavaScript via integration with Jupyter, Knitr, and Observable.\nA variety of extensions to Pandoc markdown useful for technical writing including cross-references, sub-figures, layout panels, hoverable citations and footnotes, callouts, and more.\nA project system for rendering groups of documents at once, sharing options across documents, and producing aggregate output like websites and books.\n\nDevelopment of Quarto is sponsored by Posit, PBC, where we previously created a similar system (R Markdown) that shared the same goals, but was targeted principally at users of the R language. The same core team works on both Quarto and R Markdown:\n\nJ.J. Allaire (@jjallaire)\nChristophe Dervieux (@cderv)\nCarlos Scheidegger (@cscheid)\nCharles Teague (@dragonstyle)\nYihui Xie (@yihui)\n\nWith Quarto, we are hoping to bring these tools to a much wider audience.\nQuarto is a registered trademark of Posit. Please see our trademark policy for guidelines on usage of the Quarto trademark."
+  },
+  {
+    "objectID": "docs/about/about.html#contribute",
+    "href": "docs/about/about.html#contribute",
+    "title": "About Courses",
+    "section": "Contribute",
+    "text": "Contribute\nYou can contribute to Quarto in many ways:\n\nBy opening issues to provide feedback and share ideas.\nBy submitting Pull Request (PR) to fix opened issues\nBy submitting Pull Request (PR) to suggest new features (it is considered good practice to open an issue for discussion before working on a pull request for a new feature).\n\nPlease be mindful of our code of conduct as you interact with other community members.\n\nPull Requests\nPull requests are very welcome! Here’s how to contribute via PR:\n\nFork the repository, clone it locally, and make your changes in a new branch specific to the PR. For example:\n\n\nTerminal\n\n# clone your fork\n$ git clone https://github.com/&lt;username&gt;/quarto-cli\n\n# configure for your platform (./configure.sh or ./configure.cmd for windows)\n$ cd quarto-cli\n$ ./configure.sh\n\n# checkout a new branch\n$ git checkout -b feature/newthing\n\nFor significant changes (e.g more than small bug fixes), ensure that you have signed the individual or corporate contributor agreement as appropriate. You can send the signed copy to jj@rstudio.com.\nSubmit the pull request. It is ok to submit as draft in your are still working on it but would like some feedback from us. It always good to share in the open that you are working on it.\n\nWe’ll try to be as responsive as possible in reviewing and accepting pull requests."
+  },
+  {
+    "objectID": "bug-reports.html",
+    "href": "bug-reports.html",
+    "title": "Bug Reports",
+    "section": "",
+    "text": "We want to hear about Quarto bugs and, we want to fix those bugs! The following guidance will help us be as efficient as we can."
+  },
+  {
+    "objectID": "bug-reports.html#formatting-make-githubs-markdown-work-for-us",
+    "href": "bug-reports.html#formatting-make-githubs-markdown-work-for-us",
+    "title": "Bug Reports",
+    "section": "Formatting: Make GitHub’s markdown work for us",
+    "text": "Formatting: Make GitHub’s markdown work for us\nThe easiest way to include a .qmd file in a comment is to wrap it in a code block. To make sure that GitHub doesn’t format your own .qmd, start and end your block with more backticks than you use in your .qmd file. In order to show .qmd files with three backticks (the most common case), use four backticks in your GitHub Issue:\n```\nThis is a code block\n```\nSometimes you might need more backticks:\n````\nThis is a four backticks block.\n\n```\nThis is a code block\n```\n````\n\nDon’t hold back: Tell us anything you think might make a difference\nAlthough we want the .qmd file to be small, we still can use as much information from you as you’re willing to share. Tell us all!, including:\n\nThe version of quarto you’re running\nThe operating system you’re running\nThe IDE you’re using, and its version\n\nIf you are seeing an error from Quarto, you can also provide additional diagnostic information by defining the QUARTO_PRINT_STACK environment variable.\nFor example on Unix:\nexport QUARTO_PRINT_STACK=true\nquarto render document.qmd\nor on Windows in a Powershell Terminal\n$ENV:QUARTO_PRINT_STACK=\"true\"\nquarto render document.qmd"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Ghassem Tofighi",
+    "section": "",
+    "text": "© Ghassem Tofighi"
+  },
+  {
+    "objectID": "course/machine-learning/chapter1-lesson1.html#video",
+    "href": "course/machine-learning/chapter1-lesson1.html#video",
+    "title": "1: Getting Started",
+    "section": "Video",
+    "text": "Video\nClick the video below to play. Once it’s playing, you’ll see a little rectangle in the bottom-right—click it to make the video full-screen. Press Esc to remove full-screen view. Press c to turn subtitles on/off.\n\n\nThis lesson is based partly on chapter 1 of the book."
+  },
+  {
+    "objectID": "course/machine-learning/chapter1-lesson1.html#how-to-complete-lesson-1",
+    "href": "course/machine-learning/chapter1-lesson1.html#how-to-complete-lesson-1",
+    "title": "1: Getting Started",
+    "section": "How to complete lesson 1",
+    "text": "How to complete lesson 1\nEvery lesson includes lots of hands-on exercises for you to try. Most of these are run in interactive notebooks, all of which are available on Kaggle. If you don’t work through the notebooks yourself, you’re not going to get nearly as much out of this course—so that means you need to get set up on Kaggle. We have a page to help you get going with Kaggle: click here to go there now. Instead of using Kaggle, another great option is Paperspace Gradient If you don’t have a Paperspace account yet, sign up with this link to get $10 credit (and we get a credit too).\nOnce you’ve got your Kaggle account set up, you’ll need to get familiar with Jupyter Notebook, which is the platform we use for most of this course (and which most deep learning researchers and engineers use for their work). Jupyter is the most popular tool for doing data science in Python, for good reason. It is powerful, flexible, and easy to use. We think you will love it! Since the most important thing for learning deep learning is writing code and experimenting, it’s important that you have a great platform for experimenting with code. If you haven’t used it before, we’ve provided this to help you get started: Jupyter Notebook 101.\nOK, now that you have your Kaggle account and know how to use Jupyter, you’re ready to open the notebook for this lesson: here it is. For every lesson, you can find links to all notebooks used in the Resources section of the lesson web page. For instance, for lesson 1, you’ll see that section immediately below this one.\nAs well as watching the video and working through the notebooks, you should also read the relevent chapter(s) of the fast.ai book, Practical Deep Learning for Coders. Each lesson will tell you what chapter you need to read, just below the video. For this lesson, it’s chapter 1. There’s a few ways to read the book – you can buy it as a paper book or Kindle ebook, or you can read it for free as a Jupyter notebook. The whole book is written as Jupyter notebooks, so you can also execute all the code in the book yourself. To go to the interactive Jupyter version of any chapter, click The book in the left sidebar, where you’ll find a list of chapter links. You’ll also find links to read-only versions of each chapter there."
+  },
+  {
+    "objectID": "course/machine-learning/chapter1-lesson1.html#resources",
+    "href": "course/machine-learning/chapter1-lesson1.html#resources",
+    "title": "1: Getting Started",
+    "section": "Resources",
+    "text": "Resources\n\nKaggle notebooks for this lesson:\n\nIs it a bird? Creating a model from your own data\nJupyter Notebook 101\n\nThe fastai book:\n\nPublished version\nFree notebook version\nChapter 1 notebook\n\nRepo containing all lesson notebooks\nSolutions to chapter 1 questions from the book"
+  },
+  {
+    "objectID": "course/machine-learning/chapter1-lesson1.html#links",
+    "href": "course/machine-learning/chapter1-lesson1.html#links",
+    "title": "1: Getting Started",
+    "section": "Links",
+    "text": "Links\nYou’ll see that fast.ai’s way of teaching is very different to what you might be used to, if you did a technical degree at university. Nearly all technical subjects at university are taught “bottom up”: start with basic foundations, and gradually work up to complete useful solutions to real world problems. But we go “top down”: start with complete useful solutions to real world problems, and gradually work down to the basic foundations. Education experts recommend this approach for more effective learning. For more information, have a look at this article that discusses the fast.ai teaching philosophy: Providing a Good Education in Deep Learning.\n\nHow to learn - highly recommended books for fast.ai students\n\nMeta Learning\nA Mathematician’s Lament by Paul Lockhart\nMaking Learning Whole by David Perkins\n\nJupyter\n\nPresentations: RISE\nBlogging: fastpages\nThe notebooks used to create the fastai library\nnbdev - the system we built to create Python libraries using Jupyter\n\nFastai: A Layered API for Deep Learning paper: Information Journal or arxiv or fast.ai\nDall-e 2 illustrations of Twitter bios\ntimm: PyTorch Image Models"
+  },
+  {
+    "objectID": "course/machine-learning/chapter1-lesson1.html#if-you-need-help",
+    "href": "course/machine-learning/chapter1-lesson1.html#if-you-need-help",
+    "title": "1: Getting Started",
+    "section": "If you need help",
+    "text": "If you need help\nThere’s lot of helpful people, and helpful answers to past questions, on the fast.ai forums. There are special help topics for beginner questions, to ensure that your questions aren’t missed:\n\nHelp: Setup\nHelp: Creating a dataset, and using Gradio / Spaces\nHelp: Using Colab or Kaggle\nHelp: Python, git, bash, etc\nHelp: SGD and Neural Net foundations\nHelp: Basics of fastai, PyTorch, numpy, etc\nHelp: Beginner questions that don’t fit elsewhere"
+  },
+  {
+    "objectID": "course/machine-learning/lesson1.html#video",
+    "href": "course/machine-learning/lesson1.html#video",
+    "title": "1: Getting Started",
+    "section": "Video",
+    "text": "Video\nClick the video below to play. Once it’s playing, you’ll see a little rectangle in the bottom-right—click it to make the video full-screen. Press Esc to remove full-screen view. Press c to turn subtitles on/off.\n\n\nThis lesson is based partly on chapter 1 of the book.",
+    "crumbs": [
+      "Machine Learning",
+      "Chapter 1",
+      "1: Getting Started"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/lesson1.html#how-to-complete-lesson-1",
+    "href": "course/machine-learning/lesson1.html#how-to-complete-lesson-1",
+    "title": "1: Getting Started",
+    "section": "How to complete lesson 1",
+    "text": "How to complete lesson 1\nEvery lesson includes lots of hands-on exercises for you to try. Most of these are run in interactive notebooks, all of which are available on Kaggle. If you don’t work through the notebooks yourself, you’re not going to get nearly as much out of this course—so that means you need to get set up on Kaggle. We have a page to help you get going with Kaggle: click here to go there now. Instead of using Kaggle, another great option is Paperspace Gradient If you don’t have a Paperspace account yet, sign up with this link to get $10 credit (and we get a credit too).\nOnce you’ve got your Kaggle account set up, you’ll need to get familiar with Jupyter Notebook, which is the platform we use for most of this course (and which most deep learning researchers and engineers use for their work). Jupyter is the most popular tool for doing data science in Python, for good reason. It is powerful, flexible, and easy to use. We think you will love it! Since the most important thing for learning deep learning is writing code and experimenting, it’s important that you have a great platform for experimenting with code. If you haven’t used it before, we’ve provided this to help you get started: Jupyter Notebook 101.\nOK, now that you have your Kaggle account and know how to use Jupyter, you’re ready to open the notebook for this lesson: here it is. For every lesson, you can find links to all notebooks used in the Resources section of the lesson web page. For instance, for lesson 1, you’ll see that section immediately below this one.\nAs well as watching the video and working through the notebooks, you should also read the relevent chapter(s) of the fast.ai book, Practical Deep Learning for Coders. Each lesson will tell you what chapter you need to read, just below the video. For this lesson, it’s chapter 1. There’s a few ways to read the book – you can buy it as a paper book or Kindle ebook, or you can read it for free as a Jupyter notebook. The whole book is written as Jupyter notebooks, so you can also execute all the code in the book yourself. To go to the interactive Jupyter version of any chapter, click The book in the left sidebar, where you’ll find a list of chapter links. You’ll also find links to read-only versions of each chapter there.",
+    "crumbs": [
+      "Machine Learning",
+      "Chapter 1",
+      "1: Getting Started"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/lesson1.html#resources",
+    "href": "course/machine-learning/lesson1.html#resources",
+    "title": "1: Getting Started",
+    "section": "Resources",
+    "text": "Resources\n\nKaggle notebooks for this lesson:\n\nIs it a bird? Creating a model from your own data\nJupyter Notebook 101\n\nThe fastai book:\n\nPublished version\nFree notebook version\nChapter 1 notebook\n\nRepo containing all lesson notebooks\nSolutions to chapter 1 questions from the book",
+    "crumbs": [
+      "Machine Learning",
+      "Chapter 1",
+      "1: Getting Started"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/lesson1.html#links",
+    "href": "course/machine-learning/lesson1.html#links",
+    "title": "1: Getting Started",
+    "section": "Links",
+    "text": "Links\nYou’ll see that fast.ai’s way of teaching is very different to what you might be used to, if you did a technical degree at university. Nearly all technical subjects at university are taught “bottom up”: start with basic foundations, and gradually work up to complete useful solutions to real world problems. But we go “top down”: start with complete useful solutions to real world problems, and gradually work down to the basic foundations. Education experts recommend this approach for more effective learning. For more information, have a look at this article that discusses the fast.ai teaching philosophy: Providing a Good Education in Deep Learning.\n\nHow to learn - highly recommended books for fast.ai students\n\nMeta Learning\nA Mathematician’s Lament by Paul Lockhart\nMaking Learning Whole by David Perkins\n\nJupyter\n\nPresentations: RISE\nBlogging: fastpages\nThe notebooks used to create the fastai library\nnbdev - the system we built to create Python libraries using Jupyter\n\nFastai: A Layered API for Deep Learning paper: Information Journal or arxiv or fast.ai\nDall-e 2 illustrations of Twitter bios\ntimm: PyTorch Image Models",
+    "crumbs": [
+      "Machine Learning",
+      "Chapter 1",
+      "1: Getting Started"
+    ]
+  },
+  {
+    "objectID": "course/machine-learning/lesson1.html#if-you-need-help",
+    "href": "course/machine-learning/lesson1.html#if-you-need-help",
+    "title": "1: Getting Started",
+    "section": "If you need help",
+    "text": "If you need help\nThere’s lot of helpful people, and helpful answers to past questions, on the fast.ai forums. There are special help topics for beginner questions, to ensure that your questions aren’t missed:\n\nHelp: Setup\nHelp: Creating a dataset, and using Gradio / Spaces\nHelp: Using Colab or Kaggle\nHelp: Python, git, bash, etc\nHelp: SGD and Neural Net foundations\nHelp: Basics of fastai, PyTorch, numpy, etc\nHelp: Beginner questions that don’t fit elsewhere",
+    "crumbs": [
+      "Machine Learning",
+      "Chapter 1",
+      "1: Getting Started"
+    ]
+  }
+]
