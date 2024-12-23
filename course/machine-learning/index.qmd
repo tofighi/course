@@ -6,11 +6,12 @@ format:
   html: 
     other-links:
       - href: https://ghassem.com
-        icon: speedometer
+        icon: home
         text: Ghassem Tofighi
   typst: default
   revealjs:
-    output-file: index-reveal.html
+    output-file: ml-index.html
+    scrollable: true
 creator: "@tofighi"
 ---
 
