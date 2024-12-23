@@ -11,9 +11,9 @@ format:
   typst: default
   revealjs:
     output-file: ml-index.html
+    center-title-slide: false
     smaller: true
     scrollable: true
-    center-title-slide: false
 creator: "@tofighi"
 ---
 
