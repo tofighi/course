@@ -91,12 +91,12 @@ website:
       collapse-level: 3
       contents:
         - section: "Machine Learning"
-          href: docs/deep-learning/index.qmd
+          href: course/machine-learning/index.qmd
           contents:
           - section: Chapter 1
             contents:
-              - docs/deep-learning/lesson1.qmd
-              - docs/deep-learning/lesson1.qmd
+              - course/machine-learning/lesson1.qmd
+              - course/machine-learning/lesson1.qmd
               - section: Summaries
                 contents:
                   - course/machine-learning/index.qmd
