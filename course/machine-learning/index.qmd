@@ -10,6 +10,7 @@ format:
         text: Ghassem Tofighi
   typst: default
   revealjs:
+    width: 1200
     output-file: ml-index.html
     center-title-slide: false
     smaller: true
