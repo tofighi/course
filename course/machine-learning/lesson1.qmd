@@ -13,7 +13,7 @@ format:
     center-title-slide: false
     smaller: true
     scrollable: true
-    footer: <a href="ghassem.com">Homepage</a>
+    footer: <a href="lesson1.html">Lesson1</a>
 creator: "@tofighi"
 comments:
   hypothesis: true
