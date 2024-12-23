@@ -15,6 +15,7 @@ jobs:
           rm quarto*.deb
           quarto install extension kazuyanagimoto/quarto-academic-typst --no-prompt
           quarto add quarto-ext/pointer --no-prompt
+          quarto add martinomagnifico/quarto-appearance  --no-prompt
           quarto render
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
