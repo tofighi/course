@@ -21,7 +21,7 @@ creator: "@tofighi"
 :::{.callout-tip}
 ## Welcome!
 
-[Course homepage](courses.ghassem.com/course/machine-learning)
+[Course homepage](https://courses.ghassem.com/course/machine-learning)
 :::
 
 ::: {layout="[30,70]"}
