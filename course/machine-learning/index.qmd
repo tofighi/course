@@ -11,11 +11,11 @@ format:
   typst: default
   revealjs:
     width: 1600
-    output-file: index.html
+    output-file: ml-index.html
     center-title-slide: false
     smaller: true
     scrollable: true
-    footer: <a href="index.html">Course Homepage</a>
+    footer: <a href="ml-index.html">Course Homepage</a>
 creator: "@tofighi"
 ---
 
